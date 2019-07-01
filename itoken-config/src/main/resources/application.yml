@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: itoken-config
+  cloud:
+    config:
+      lable: master
+      server:
+        git:
+          uri: https://github.com/yuting95/itoken.git
+          search-paths: itoken-config/
+          username: yuting95
+          password: yuting2187994437
+  zipkin:
+    base-url: http://localhost:9411
+  boot:
+    admin:
+      client:
+        url: http://localhost:8084
+
+server:
+  port: 8888
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
